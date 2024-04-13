@@ -9,6 +9,7 @@
     <meta content="MRU, Encuentro, Choque, Fisica" name="palabras-principales"/>
     <link rel="stylesheet" type="text/css" href="estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
 
   </head>
 
@@ -25,65 +26,73 @@
         <h1>Problemas de Encuentro</h1>
     </header>
 
-    <section> 
+    <form> 
         <div class="vehiculo">
-            <h2>Vehiculo 1</h2>
+            <h2>Vehículo 1</h2>
             <h3>Velocidad:</h3>
             <input type="number" min="1" max="10" value="1">
             <span>[ m/s ]</span> 
-            <h3>Posicion:</h3>
+            <h3>Posición:</h3>
             <input type="number" min="0" max="10" value="0"> 
             <span>[ m ]</span>
 
             <h3>Color:</h3>
-            <div class="color">
-                <select name="auto+" id="auto+">
-                    <option>Rojo</option>
-                    <option>Negro</option>
-                    <option>Azul</option>
-                </select>    
-            </div>
-            <img class="img" src="imagenes/rojo+.png" alt="Auto rojo">
-            <img class="img" src="imagenes/negro+.png" alt="Auto negro">
-            <img class="img" src="imagenes/azul+.png" alt="Auto azul">
+            <div class="radio-">
+                <input class="radio-auto" type="radio" name="auto-" value="rojo" checked> Rojo
+                <img class="img" src=imagenes/rojo+.png alt="Auto rojo">
+                <input class="radio-auto" type="radio" name="auto-" value="negro"> Negro
+                <img class="img" src="imagenes/negro+.png" alt="Auto negro">
+                <input class="radio-auto" type="radio" name="auto-" value="azul"> Azul
+                <img class="img" src="imagenes/azul+.png" alt="Auto azul">
+                </div>
         
         </div>
         
         <div class="vehiculo">
-            <h2>Vehiculo 2</h2>
+            <h2>Vehículo 2</h2>
             <h3>Velocidad:</h3>
             <input type="number" min="-10" max="-1" value="-1"> 
             <span>[ m/s ]</span> 
-            <h3>Posicion:</h3>
+            <h3>Posición:</h3>
             <input type="number" min="0" max="10" value="10">
             <span>[ m ]</span> 
 
             <h3>Color:</h3>
-            <div class="color">
-                <select name="auto+" id="auto+">
-                    <option>Rojo</option>
-                    <option>Negro</option>
-                    <option>Azul</option>
-                </select>    
-            </div>
+
+            <div class="radio-">
+            <input class="radio-auto" type="radio" name="auto-" value="rojo" checked> Rojo
             <img class="img" src=imagenes/rojo-.png alt="Auto rojo">
+            <input class="radio-auto" type="radio" name="auto-" value="negro"> Negro
             <img class="img" src="imagenes/autonegro-.png" alt="Auto negro">
+            <input class="radio-auto" type="radio" name="auto-" value="azul"> Azul
             <img class="img" src="imagenes/azul-.png" alt="Auto azul">
+            </div>
         
         </div>
 
         <div id="calculo">
             <h3>¿Qué desea calcular?</h3>
-            <select>
+            
+            <select placeholder="Elija una opción">
                 <option value="posicion">Posición de encuentro</option>
                 <option value="tiempo">Tiempo de encuentro</option>
             </select>
 
-            <button type="button" class="boton">Calcular</button>
+            <button type="submit" class="boton">Ingresar</button>
         </div>
 
-    </section>
+    </form>
 
-    <footer></footer>
+    <footer class="contacto">
+        <h2>Contacto</h2>
+        <h3>Mail: problemasencuentro@ucc.edu.ar</h3>
+        <h3>Teléfono: 351 6221-536</h3>
+    </footer>
+    
+    <div class="logo">
+        <img id="logo_ucc" src="imagenes/logoucc.png" alt="Logo UCC">
+    </div>
+
+
   </body>
 </html>
