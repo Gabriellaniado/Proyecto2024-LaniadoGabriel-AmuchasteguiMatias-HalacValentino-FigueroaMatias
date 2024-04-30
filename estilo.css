@@ -108,7 +108,27 @@ select, input {
     border-width: 2px;
     /*Le da un contorno a las cajas de ingreso de datos*/
 }
+.Titulos{
+    font-size: x-large;
+    font-style: initial;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.Teoria{
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
 
+.imagen-teo {
+    width:400px;
+    height: auto; /* Altura se ajustará automáticamente */
+    margin-bottom: 15px;
+    
+}
+
+  
 footer h3 {
     color: white;
     font-family: 'Montserrat', sans-serif;
