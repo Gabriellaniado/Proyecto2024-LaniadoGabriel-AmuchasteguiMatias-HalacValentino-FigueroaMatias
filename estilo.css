@@ -127,6 +127,23 @@ select, input {
     margin-bottom: 15px;
     
 }
+.imagen-form{
+
+    width: min-content;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+.formula img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.formula h2 {
+    color: #007bff; /* Color azul para los títulos de fórmulas */
+}
 
   
 footer h3 {
