@@ -21,7 +21,7 @@ function calculo (){
     tiempo = Math.round(tiempo * 100) / 100;
 
     if(op == "posicion") {
-        alert("La posicion de encuentro es: "+ distancia + " m");
+        alert("La posicion de encuentro es: "+ parseFloat(distancia) + " m");
     }
 
     if(op == "tiempo")
@@ -29,4 +29,69 @@ function calculo (){
         alert("El tiempo de encuentro es: " + tiempo + " s");
     }
 
+}
+
+
+function dibujar() {
+    var canvas = document.getElementById("myCanvas");
+    var a1 = canvas.getContext("2d");
+    var a2 = canvas.getContext("2d");   
+    var centerY = canvas.height / 2;
+
+    var auto1 = new Image(100,20);
+    var auto2 = new Image(100,20);
+
+    var au1 = document.getElementsByClassName("radio+auto");
+    for (var i = 0; i < au1.length; i++) {
+        if (au1[i].checked) {
+            if (au1[i].value === "rojo+") {
+                auto1.src = "imagenes/rojo+.png";
+            } else if (au1[i].value === "negro+") {
+                auto1.src = "imagenes/negro+.png";
+            } else {
+                auto1.src = "imagenes/azul+.png";
+            }
+            break;
+        }
+    }
+
+    var au2 = document.getElementsByClassName("radio-auto");
+    for (var j = 0; j < au2.length; j++) {
+        if (au2[j].checked) {
+            if (au2[j].value === "rojo-") {
+                auto2.src = "imagenes/rojo-.png";
+            } else if (au2[j].value === "negro-") {
+                auto2.src = "imagenes/autonegro-.png";
+            } else {
+                auto2.src = "imagenes/azul-.png";
+            }
+            break;
+        }
+    }
+
+    var x1 = 0;
+    var x2 = canvas.width-80;
+
+    function animar(){
+
+        canvas.width = canvas.width;
+        // dibujo el auto 1
+        a1.beginPath();
+        a1.drawImage(auto1,x1,centerY-(auto1.height/2),80,80);
+
+        //dibujo el auto 2
+        a2.beginPath();
+        a2.drawImage(auto2,x2,centerY-(auto2.height/2),80,80);
+
+        
+        x1 +=velocidad1*0.05;
+        x2 +=velocidad2*0.05;
+
+        if( x1 >= x2-90){
+            clearInterval(id);
+        }
+
+    }
+
+    var id = setInterval(animar, tiempo);
 }
