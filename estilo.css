@@ -1,4 +1,5 @@
-h1, footer h2 {
+h1,
+footer h2 {
     color: white;
     display: inline;
     font-family: 'Montserrat', sans-serif;
@@ -8,7 +9,8 @@ h2 b {
     font-family: 'Montserrat', sans-serif;
 }
 
-header, footer{
+header,
+footer {
     /*Caracteristicas de las cajas de titulo y pie de pagina*/
     background-color: #333;
     padding: 10px;
@@ -39,60 +41,68 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    text-decoration: none; /*Le saca el subrayado a las palabras*/
+    text-decoration: none;
+    /*Le saca el subrayado a las palabras*/
 }
 
-nav ul li a:hover{
-    color:grey; /*Le cambia el color al posicionarse por encima*/
+nav ul li a:hover {
+    color: grey;
+    /*Le cambia el color al posicionarse por encima*/
 }
 
-.nav_active{
-    color: rgb(147, 145, 145); /*Queda con otro color el vinculo donde esta situado*/
+.nav_active {
+    color: rgb(147, 145, 145);
+    /*Queda con otro color el vinculo donde esta situado*/
 }
 
-form{
+form {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /*Crea una sombra por detras*/
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    /*Crea una sombra por detras*/
 }
-.vehiculo{
-    background-color: #f9f9f9; /*Le crea cierta opacidad a la caja*/
+
+.vehiculo {
+    background-color: #f9f9f9;
+    /*Le crea cierta opacidad a la caja*/
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
 }
 
-.radio-auto{
+.radio-auto {
     margin-left: 20px;
 }
 
-.radio+auto{
+.radio+auto {
     margin-left: 20px;
 }
 
 .img {
-   width: 8%;
-   height: 8%; 
-   padding: 5px;
-   margin-right:50px;
-   margin-top: 20px;
-   transition: all 1.2s; /*Ralentiza las animaciones*/
+    width: 8%;
+    height: 8%;
+    padding: 5px;
+    margin-right: 50px;
+    margin-top: 20px;
+    transition: all 1.2s;
+    /*Ralentiza las animaciones*/
 }
 
 .img:hover {
     width: 13%;
-    height: 13%; 
+    height: 13%;
     padding: 5px;
-    margin-right:50px;
-    transform: rotate(360deg); /*Hace girar las imagenes*/
+    margin-right: 50px;
+    transform: rotate(360deg);
+    /*Hace girar las imagenes*/
 }
 
 
 #calculo {
-    display:list-item;
+    display: list-item;
     margin-left: 30px;
     margin-top: 15px;
 }
@@ -103,39 +113,57 @@ form{
     padding: 10px;
     margin-left: 20px;
     border-radius: 6px;
-    cursor:pointer; /*cambia el tipo de cursor sobre el boton*/
+    cursor: pointer;
+    /*cambia el tipo de cursor sobre el boton*/
 }
 
 .boton:hover {
     background-color: #555;
 }
 
-select, input {
+.grafico-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*El titulo queda en el medio*/
+}
+
+.mru {
+    border: 2px solid black;
+    /*Pone el borde negro alrededor del canvas*/
+}
+
+select,
+input {
     padding: 5px;
     border-color: black;
     border-width: 2px;
     /*Le da un contorno a las cajas de ingreso de datos*/
 }
-.Titulos{
+
+.Titulos {
     font-size: x-large;
     font-style: initial;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     margin-bottom: 5px;
 }
-.Teoria{
+
+.Teoria {
     font-size: large;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 15px;
 }
 
 .imagen-teo {
-    width:400px;
-    height: auto; /* Altura se ajustará automáticamente */
+    width: 400px;
+    height: auto;
+    /* Altura se ajustará automáticamente */
     margin-bottom: 15px;
-    
+
 }
-.imagen-form{
+
+.imagen-form {
 
     width: min-content;
     height: auto;
@@ -150,23 +178,24 @@ select, input {
 }
 
 .formula h2 {
-    color: #007bff; /* Color azul para los títulos de fórmulas */
+    color: #007bff;
+    /* Color azul para los títulos de fórmulas */
 }
 
-  
+
 footer h3 {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: medium;
 }
 
-.logo{
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#logo_ucc{
+#logo_ucc {
     width: 13%;
     height: 13%;
 }
