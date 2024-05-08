@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Problemas de Encuentro</title>
-    <meta content="Gabriel Laniado, Amuchastegui Matias, Halac Valentino, Figueroa Matias" name="author"/>
+    <meta content="Gabriel Laniado, Amuchastegui Matias, Halac Valentino, Figueroa Matias" name="author" />
     <meta content="Web de Resolucion de MRU" name="description" />
-    <meta content="MRU, Encuentro, Choque, Fisica" name="palabras-principales"/>
+    <meta content="MRU, Encuentro, Choque, Fisica" name="palabras-principales" />
     <link rel="stylesheet" type="text/css" href="estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
     <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="funciones.js"></script>
 
-  </head>
+</head>
 
-  <body>
+<body>
     <nav>
-        <!--Define la barra de navegacion--> 
+        <!--Define la barra de navegacion-->
         <ul>
             <li><a href="#" class="nav_active">Inicio</a></li>
             <li><a href="teoria.html">Teoría</a></li>
@@ -28,17 +29,17 @@
         <h1>Problemas de Encuentro</h1>
     </header>
 
-    <form> 
+    <form>
         <div class="vehiculo">
-            <!--Define el vehiculo que se movera hacia la derecha--> 
+            <!--Define el vehiculo que se movera hacia la derecha-->
             <h2>Vehículo 1</h2>
 
             <h3>Velocidad:</h3>
             <input type="number" id="vel1" min="1" step="0.01">
-            <span>[ m/s ]</span> 
+            <span>[ m/s ]</span>
 
             <h3>Posición:</h3>
-            <input type="number" id="pos1" min="0"> 
+            <input type="number" id="pos1" min="0">
             <span>[ m ]</span>
 
             <h3>Color:</h3>
@@ -50,20 +51,20 @@
                 <input class="radio+auto" type="radio" name="auto+" value="azul+"> Azul
                 <img class="img" src="imagenes/azul+.png" alt="Auto azul">
             </div>
-        
+
         </div>
-        
+
         <div class="vehiculo">
-            <!--Define el vehiculo que se movera hacia la izquierda--> 
+            <!--Define el vehiculo que se movera hacia la izquierda-->
             <h2>Vehículo 2</h2>
 
             <h3>Velocidad:</h3>
-            <input type="number" id="vel2"  max="-0.01" step="0.01"> 
-            <span>[ m/s ]</span> 
+            <input type="number" id="vel2" max="-0.01" step="0.01">
+            <span>[ m/s ]</span>
 
             <h3>Posición:</h3>
             <input type="number" id="pos2" min="1">
-            <span>[ m ]</span> 
+            <span>[ m ]</span>
 
             <h3>Color:</h3>
             <div class="radio-">
@@ -74,13 +75,13 @@
                 <input class="radio-auto" type="radio" name="auto-" value="azul-"> Azul
                 <img class="img" src="imagenes/azul-.png" alt="Auto azul">
             </div>
-        
+
         </div>
 
         <div id="calculo">
-            <!--Caja para elegir opciones de calculo--> 
+            <!--Caja para elegir opciones de calculo-->
             <h3>¿Qué desea calcular?</h3>
-            
+
             <select id="opcion">
                 <option value="posicion">Posición de encuentro</option>
                 <option value="tiempo">Tiempo de encuentro</option>
@@ -89,31 +90,27 @@
             <button type="button" class="boton" onclick="calculo();dibujar();">Ingresar</button>
         </div>
 
-        
+
     </form>
 
-    <div class="vehiculo">
-        <!--Caja de animacion en Javascript--> 
+    <div class="grafico-container">
         <h2><b>GRÁFICO</b></h2>
-
-        <canvas id="myCanvas" class="mru" width="800px" height="600px">
-            
-        </canvas>
-        
-    
+        <canvas id="myCanvas" class="mru" width="800px" height="400px"></canvas>
     </div>
 
+
+
     <footer class="contacto">
-        <!--Define el pie de pagina--> 
+        <!--Define el pie de pagina-->
         <h2>Contacto</h2>
         <h3>Mail: problemasencuentro@ucc.edu.ar</h3>
         <h3>Teléfono: 351 6221-536</h3>
     </footer>
-    
+
     <div class="logo">
         <img id="logo_ucc" src="imagenes/logoucc.png" alt="Logo UCC">
     </div>
 
-  </body>
-</html>
+</body>
 
+</html>

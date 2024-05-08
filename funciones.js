@@ -30,8 +30,6 @@ function calculo (){
     }
 
 }
-
-
 function dibujar() {
     var canvas = document.getElementById("myCanvas");
     var a1 = canvas.getContext("2d");
@@ -83,7 +81,7 @@ function dibujar() {
         a2.beginPath();
         a2.drawImage(auto2,x2,centerY-(auto2.height/2),80,80);
 
-        
+
         x1 +=velocidad1*0.05;
         x2 +=velocidad2*0.05;
 
