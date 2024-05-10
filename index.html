@@ -59,11 +59,11 @@
             <h2>Vehículo 2</h2>
 
             <h3>Velocidad:</h3>
-            <input type="number" id="vel2" max="-0.01" step="0.01">
+            <input type="number" id="vel2" max="-0.01" step="0.01" onchange="comprobarNegativo(this.value)">
             <span>[ m/s ]</span>
 
             <h3>Posición:</h3>
-            <input type="number" id="pos2" min="1">
+            <input type="number" id="pos2" min="1" onchange="comprobrarPosicion()">
             <span>[ m ]</span>
 
             <h3>Color:</h3>

@@ -14,10 +14,10 @@ function calculo (){
 
     var op = document.getElementById("opcion").value;
 
-    tiempo = (posicion2-posicion1) / (velocidad1-velocidad2);
-    distancia = posicion1 + velocidad1 * tiempo;
+    tiempo = (posicion2-posicion1) / (velocidad1-velocidad2); //Calculo del tiempo de encuentro
+    distancia = posicion1 + velocidad1 * tiempo; //Calculo posicion de encuentro
 
-    distancia = Math.round(distancia * 100) / 100;
+    distancia = Math.round(distancia * 100) / 100;  //Funcion que redondea a dos decimales
     tiempo = Math.round(tiempo * 100) / 100;
 
     if(op == "posicion") {
@@ -28,8 +28,8 @@ function calculo (){
     {
         alert("El tiempo de encuentro es: " + tiempo + " s");
     }
-
 }
+
 function dibujar() {
     var canvas = document.getElementById("myCanvas");
     var a1 = canvas.getContext("2d");
@@ -40,6 +40,7 @@ function dibujar() {
     var auto2 = new Image(100,20);
 
     var au1 = document.getElementsByClassName("radio+auto");
+    //El siguiente ciclo recorre el input, al encontrar una casilla que este marcada, devuelve su valor y lo asocia a una imagen.
     for (var i = 0; i < au1.length; i++) {
         if (au1[i].checked) {
             if (au1[i].value === "rojo+") {
@@ -73,23 +74,39 @@ function dibujar() {
     function animar(){
 
         canvas.width = canvas.width;
-        // dibujo el auto 1
+        //Dibujo el auto 1
         a1.beginPath();
         a1.drawImage(auto1,x1,centerY-(auto1.height/2),80,80);
 
-        //dibujo el auto 2
+        //Dibujo el auto 2
         a2.beginPath();
         a2.drawImage(auto2,x2,centerY-(auto2.height/2),80,80);
 
-
-        x1 +=velocidad1*0.05;
+        x1 +=velocidad1*0.05; //velocidad a escala
         x2 +=velocidad2*0.05;
 
-        if( x1 >= x2-90){
+        if( x1 >= x2-90){ //Evita que se choquen y superpongan los autos
             clearInterval(id);
         }
 
     }
 
     var id = setInterval(animar, tiempo);
+}
+
+function comprobarNegativo(valor){
+    if (valor>=0){
+        alert('La velocidad 2 debe ser negativa');
+        document.getElementById("vel2").value = "";
+    }
+}
+
+function comprobrarPosicion(){
+    let pos1 = document.getElementById("pos1").value;
+    let pos2 = document.getElementById("pos2").value;
+
+    if (pos1>=pos2){
+        alert ("La posición 1 debe ser menor a la posición 2");
+        document.getElementById("pos2").value = "";
+    }
 }
