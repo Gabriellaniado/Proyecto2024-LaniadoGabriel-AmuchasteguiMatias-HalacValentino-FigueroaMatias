@@ -15,7 +15,7 @@ function calculo (){
     var op = document.getElementById("opcion").value;
 
     tiempo = (posicion2-posicion1) / (velocidad1-velocidad2); //Calculo del tiempo de encuentro
-    distancia = posicion1 + velocidad1 * tiempo; //Calculo posicion de encuentro
+    distancia = velocidad1 * tiempo; //Calculo posicion de encuentro
 
     distancia = Math.round(distancia * 100) / 100;  //Funcion que redondea a dos decimales
     tiempo = Math.round(tiempo * 100) / 100;
@@ -102,8 +102,8 @@ function comprobarNegativo(valor){
 }
 
 function comprobrarPosicion(){
-    let pos1 = document.getElementById("pos1").value;
-    let pos2 = document.getElementById("pos2").value;
+    let pos1 = parseFloat(document.getElementById("pos1").value);
+    let pos2 = parseFloat(document.getElementById("pos2").value);
 
     if (pos1>=pos2){
         alert ("La posición 1 debe ser menor a la posición 2");
