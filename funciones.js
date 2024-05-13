@@ -1,3 +1,7 @@
+/**
+ * Variables globales para almacenar la velocidad y la posición de dos objetos.
+ */
+
 var velocidad1;
 var velocidad2;
 var posicion1;
@@ -5,6 +9,12 @@ var posicion2;
 var distancia;
 var tiempo;
 
+/**
+ * Esta funcion "calculo" calcula el tiempo y la posicion de dos objetos que se encuentran basado en sus velocidades y
+ * sus posiciones iniciales, y segun la opcion seleccionada muestra el resultado.
+ * @method calculo
+ * @return {void} No devuelve ningún valor.
+ */
 function calculo() {
 
     velocidad1 = parseFloat(document.getElementById("vel1").value);
@@ -35,6 +45,11 @@ function calculo() {
 }
 
 
+/**
+ * La funcion "dibujar" anima dos autos moviendoze horizontalmente en un canvas basado en la seleccion del usuario
+ * de posiciones, imagenes y velocidades, previniendo un choque.
+ * @method dibujar
+ */
 function dibujar() {
     var canvas = document.getElementById("myCanvas");
     var a1 = canvas.getContext("2d");
@@ -76,6 +91,11 @@ function dibujar() {
     var x1 = 0;
     var x2 = canvas.width - 80;
 
+  /**
+   * La funcion 'animar' anima a dos auots moviendose horizontalmente en un canvas, asegurandose de que no
+   * choquen ni se superpongan.
+   * @method animar
+   */
     function animar() {
 
         canvas.width = canvas.width;
@@ -99,6 +119,11 @@ function dibujar() {
     var id = setInterval(animar, tiempo);
 }
 
+/**
+ * Función para comprobar si el valor es negativo y mostrar una alerta si no lo es.
+ * @method comprobarNegativo
+ * @param {number} valor - El valor a comprobar.
+ */
 function comprobarNegativo(valor) {
     if (valor >= 0) {
         alert('La velocidad 2 debe ser negativa');
@@ -106,6 +131,11 @@ function comprobarNegativo(valor) {
     }
 }
 
+/**
+ * La funcion "comprobrarPosicion" cheque que el valor de la posicion 1 sea menor al valor de la 
+ * posicion 2 y alerta al usuario si no lo es.
+ * @method comprobrarPosicion
+ */
 function comprobrarPosicion() {
     let pos1 = parseFloat(document.getElementById("pos1").value);
     let pos2 = parseFloat(document.getElementById("pos2").value);
