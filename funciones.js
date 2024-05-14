@@ -1,5 +1,5 @@
 /**
- * Variables globales para almacenar la velocidad y la posición de dos objetos.
+ * Variables globales para almacenar la velocidad y la posicion de dos objetos.
  */
 
 var velocidad1;
@@ -10,7 +10,7 @@ var distancia;
 var tiempo;
 
 /**
- * Esta funcion "calculo" calcula el tiempo y la posicion de dos objetos que se encuentran basado en sus velocidades y
+ * Esta funcion "calculo" calcula el tiempo y la posicion de dos objetos que se encuentran, basado en sus velocidades y
  * sus posiciones iniciales, y segun la opcion seleccionada muestra el resultado.
  * @method calculo
  * @return {void} No devuelve ningún valor.
@@ -46,9 +46,10 @@ function calculo() {
 
 
 /**
- * La funcion "dibujar" anima dos autos moviendoze horizontalmente en un canvas basado en la seleccion del usuario
+ * La funcion "dibujar" anima dos autos moviendose horizontalmente en un canvas basado en la seleccion del usuario
  * de posiciones, imagenes y velocidades, previniendo un choque.
  * @method dibujar
+ * @return {void} No devuelve ningún valor.
  */
 function dibujar() {
     var canvas = document.getElementById("myCanvas");
@@ -92,9 +93,10 @@ function dibujar() {
     var x2 = canvas.width - 80;
 
   /**
-   * La funcion 'animar' anima a dos auots moviendose horizontalmente en un canvas, asegurandose de que no
+   * La funcion 'animar' anima a dos autos moviendose horizontalmente en un canvas, asegurandose de que no
    * choquen ni se superpongan.
    * @method animar
+   * @return {void} No devuelve ningún valor.
    */
     function animar() {
 
@@ -135,6 +137,7 @@ function comprobarNegativo(valor) {
  * La funcion "comprobrarPosicion" cheque que el valor de la posicion 1 sea menor al valor de la 
  * posicion 2 y alerta al usuario si no lo es.
  * @method comprobrarPosicion
+ * @return {void} No devuelve ningún valor.
  */
 function comprobrarPosicion() {
     let pos1 = parseFloat(document.getElementById("pos1").value);
