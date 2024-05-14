@@ -73,11 +73,7 @@ form {
     border-radius: 8px;
 }
 
-.radio-auto {
-    margin-left: 20px;
-}
-
-.radio+auto {
+.radio-auto, .radioauto {
     margin-left: 20px;
 }
 

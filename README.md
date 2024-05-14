@@ -8,7 +8,7 @@ Esta página resuelve problemas de encuentro (MRU)
 * Halac, Valentino León
 * Figueroa, Matías
 
-## Tecnologías Usadas
+## Tecnologías Utilizadas
 * HTML5
 * CSS3
 * JavaScript
