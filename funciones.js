@@ -60,7 +60,7 @@ function dibujar() {
     var auto1 = new Image(100, 20);
     var auto2 = new Image(100, 20);
 
-    var au1 = document.getElementsByClassName("radio+auto");
+    var au1 = document.getElementsByClassName("radioauto");
     //El siguiente ciclo recorre el input, al encontrar una casilla que este marcada, devuelve su valor y lo asocia a una imagen.
     for (var i = 0; i < au1.length; i++) {
         if (au1[i].checked) {

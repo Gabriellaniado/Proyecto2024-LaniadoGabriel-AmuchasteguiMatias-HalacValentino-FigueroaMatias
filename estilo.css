@@ -1,5 +1,4 @@
-h1,
-footer h2 {
+h1, footer h2 {
     color: white;
     display: inline;
     font-family: 'Montserrat', sans-serif;
@@ -9,8 +8,7 @@ h2 b {
     font-family: 'Montserrat', sans-serif;
 }
 
-header,
-footer {
+header,footer {
     /*Caracteristicas de las cajas de titulo y pie de pagina*/
     background-color: #333;
     padding: 10px;
