@@ -1,14 +1,16 @@
-h1, footer h2 {
+h1,
+footer h2 {
     color: white;
     display: inline;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 h2 b {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
-header,footer {
+header,
+footer {
     /*Caracteristicas de las cajas de titulo y pie de pagina*/
     background-color: #333;
     padding: 10px;
@@ -71,7 +73,8 @@ form {
     border-radius: 8px;
 }
 
-.radio-auto, .radioauto {
+.radio-auto,
+.radioauto {
     margin-left: 20px;
 }
 
@@ -93,7 +96,6 @@ form {
     transform: rotate(360deg);
     /*Hace girar las imagenes*/
 }
-
 
 #calculo {
     display: list-item;
@@ -138,14 +140,14 @@ input {
 .Titulos {
     font-size: x-large;
     font-style: initial;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 .Teoria {
     font-size: large;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 15px;
 }
 
@@ -154,16 +156,13 @@ input {
     height: auto;
     /* Altura se ajustará automáticamente */
     margin-bottom: 15px;
-
 }
 
 .imagen-form {
-
     width: min-content;
     height: auto;
     margin-bottom: 15px;
 }
-
 
 .formula img {
     max-width: 100%;
@@ -176,10 +175,9 @@ input {
     /* Color azul para los títulos de fórmulas */
 }
 
-
 footer h3 {
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: medium;
 }
 

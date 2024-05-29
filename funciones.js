@@ -16,7 +16,6 @@ var tiempo;
  * @return {void} No devuelve ningún valor.
  */
 function calculo() {
-
     velocidad1 = parseFloat(document.getElementById("vel1").value);
     velocidad2 = parseFloat(document.getElementById("vel2").value);
     posicion1 = parseFloat(document.getElementById("pos1").value);
@@ -29,7 +28,7 @@ function calculo() {
     if (posicion1 === 0) {
         distancia = velocidad1 * tiempo;
     } else {
-        distancia = (velocidad1 * tiempo) + posicion1; // Calculo posicion de encuentro 
+        distancia = velocidad1 * tiempo + posicion1; // Calculo posicion de encuentro
     }
 
     distancia = Math.round(distancia * 100) / 100; // Funcion que redondea a dos decimales
@@ -43,7 +42,6 @@ function calculo() {
         alert("El tiempo de encuentro es: " + tiempo + " s");
     }
 }
-
 
 /**
  * La funcion "dibujar" anima dos autos moviendose horizontalmente en un canvas basado en la seleccion del usuario
@@ -92,33 +90,33 @@ function dibujar() {
     var x1 = 0;
     var x2 = canvas.width - 80;
 
-  /**
-   * La funcion 'animar' anima a dos autos moviendose horizontalmente en un canvas, asegurandose de que no
-   * choquen ni se superpongan.
-   * @method animar
-   * @return {void} No devuelve ningún valor.
-   */
+    /**
+     * La funcion 'animar' anima a dos autos moviendose horizontalmente en un canvas, asegurandose de que no
+     * choquen ni se superpongan.
+     * @method animar
+     * @return {void} No devuelve ningún valor.
+     */
     function animar() {
-
         canvas.width = canvas.width;
         //Dibujo el auto 1
         a1.beginPath();
-        a1.drawImage(auto1, x1, centerY - (auto1.height / 2), 80, 80);
+        a1.drawImage(auto1, x1, centerY - auto1.height / 2, 80, 80);
 
         //Dibujo el auto 2
         a2.beginPath();
-        a2.drawImage(auto2, x2, centerY - (auto2.height / 2), 80, 80);
+        a2.drawImage(auto2, x2, centerY - auto2.height / 2, 80, 80);
 
-        x1 += velocidad1 * 0.05; //velocidad a escala
-        x2 += velocidad2 * 0.05;
+        x1 += velocidad1*0.25; //velocidad a escala
+        x2 += velocidad2*0.25;
 
-        if (x1 >= x2 - 90) { //Evita que se choquen y superpongan los autos
-            clearInterval(id);
+        if (x1 >= x2 - 90) {
+            //Evita que se choquen y superpongan los autos
+            cancelAnimationFrame(id);
+        } else {
+            requestAnimationFrame(animar);
         }
-
     }
-
-    var id = setInterval(animar, tiempo);
+    var id = requestAnimationFrame(animar);
 }
 
 /**
@@ -128,13 +126,13 @@ function dibujar() {
  */
 function comprobarNegativo(valor) {
     if (valor >= 0) {
-        alert('La velocidad 2 debe ser negativa');
+        alert("La velocidad 2 debe ser negativa");
         document.getElementById("vel2").value = "";
     }
 }
 
 /**
- * La funcion "comprobrarPosicion" cheque que el valor de la posicion 1 sea menor al valor de la 
+ * La funcion "comprobrarPosicion" cheque que el valor de la posicion 1 sea menor al valor de la
  * posicion 2 y alerta al usuario si no lo es.
  * @method comprobrarPosicion
  * @return {void} No devuelve ningún valor.

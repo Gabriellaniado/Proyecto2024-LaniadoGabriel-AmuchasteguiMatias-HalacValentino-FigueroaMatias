@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
     <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="funciones.js"></script>
-
 </head>
 
 <body>
@@ -34,19 +33,28 @@
             <!--Define el vehiculo que se movera hacia la derecha-->
             <h2>Vehículo 1</h2>
 
-            <label for="vel1"><h3>Velocidad:</h3></label><input type="number" id="vel1" min="1" step="0.01">
+            <label for="vel1">
+                <h3>Velocidad:</h3>
+            </label><input type="number" id="vel1" min="1" step="0.01">
             <span>[ m/s ]</span>
 
-            <label for="pos1"><h3>Posición:</h3></label><input type="number" id="pos1" min="0">
+            <label for="pos1">
+                <h3>Posición:</h3>
+            </label><input type="number" id="pos1" min="0">
             <span>[ m ]</span>
 
             <h3>Color:</h3>
             <div class="radio+">
-                <input class="radioauto" type="radio" name="auto+" value="rojo+" checked> Rojo
+                <label for="rojo+"><input class="radioauto" type="radio" id="rojo+" name="auto+" value="rojo+" checked>
+                    Rojo</label>
                 <img class="img" src="imagenes/rojo+.png" alt="Auto rojo">
-                <input class="radioauto" type="radio" name="auto+" value="negro+"> Negro
+
+                <label for="negro+"><input class="radioauto" type="radio" id="negro+" name="auto+" value="negro+">
+                    Negro</label>
                 <img class="img" src="imagenes/negro+.png" alt="Auto negro">
-                <input class="radioauto" type="radio" name="auto+" value="azul+"> Azul
+
+                <label for="azul+"><input class="radioauto" type="radio" id="azul+" name="auto+" value="azul+">
+                    Azul</label>
                 <img class="img" src="imagenes/azul+.png" alt="Auto azul">
             </div>
 
@@ -56,21 +64,30 @@
             <!--Define el vehiculo que se movera hacia la izquierda-->
             <h2>Vehículo 2</h2>
 
-            <label for="vel2"><h3>Velocidad:</h3></label>
+            <label for="vel2">
+                <h3>Velocidad:</h3>
+            </label>
             <input type="number" id="vel2" max="-0.01" step="0.01" onchange="comprobarNegativo(this.value)">
             <span>[ m/s ]</span>
 
-            <label for="pos2"><h3>Posición:</h3></label>
+            <label for="pos2">
+                <h3>Posición:</h3>
+            </label>
             <input type="number" id="pos2" min="1" onchange="comprobrarPosicion()">
             <span>[ m ]</span>
 
             <h3>Color:</h3>
             <div class="radio-">
-                <input class="radio-auto" type="radio" name="auto-" value="rojo-" checked> Rojo
+                <label for="rojo"><input class="radio-auto" type="radio" id="rojo" name="auto-" value="rojo-" checked>
+                    Rojo</label>
                 <img class="img" src="imagenes/rojo-.png" alt="Auto rojo">
-                <input class="radio-auto" type="radio" name="auto-" value="negro-"> Negro
+
+                <label for="negro"><input class="radio-auto" type="radio" id="negro" name="auto-" value="negro-">
+                    Negro</label>
                 <img class="img" src="imagenes/autonegro-.png" alt="Auto negro">
-                <input class="radio-auto" type="radio" name="auto-" value="azul-"> Azul
+
+                <label for="azul"><input class="radio-auto" type="radio" id="azul" name="auto-" value="azul-">
+                    Azul</label>
                 <img class="img" src="imagenes/azul-.png" alt="Auto azul">
             </div>
 
@@ -78,16 +95,17 @@
 
         <div id="calculo">
             <!--Caja para elegir opciones de calculo-->
-            <label for="opcion"><h3>¿Qué desea calcular?</h3></label>
+            <h3>¿Qué desea calcular?</h3>
 
             <select id="opcion">
-                <option value="posicion">Posición de encuentro</option>
-                <option value="tiempo">Tiempo de encuentro</option>
+                <option value="posicion"><label for="opcion">Posición de
+                        encuentro</label></option>
+                <option value="tiempo"><label for="opcion">Tiempo de
+                        encuentro</label></option>
             </select>
 
-            <button type="button" class="boton" onclick="calculo();dibujar();">Ingresar</button>
+            <button type="button" class="boton" onclick="calculo();dibujar()">Ingresar</button>
         </div>
-
 
     </form>
 
@@ -95,8 +113,6 @@
         <h2><b>GRÁFICO</b></h2>
         <canvas id="myCanvas" class="mru" width="800px" height="400px"></canvas>
     </div>
-
-
 
     <footer class="contacto">
         <!--Define el pie de pagina-->
