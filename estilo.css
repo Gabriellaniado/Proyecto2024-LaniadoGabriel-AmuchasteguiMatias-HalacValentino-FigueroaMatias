@@ -191,3 +191,35 @@ footer h3 {
     width: 13%;
     height: 13%;
 }
+
+@media (max-width: 600px) {
+    /* Grafico responsive*/
+    .grafico-container{
+        display: inline; /*Permite acomodar a la izquierda la caja*/
+    }
+    .mru {
+        width: 380px; /* Hace mas chico el canvas */
+        height: auto; /* Altura se ajusta automáticamente */
+    }
+    /*Logo UCC responsive*/
+    #logo_ucc {
+        width: 40%; /*Hace mas grande el logo*/
+        height: 40%;
+    }
+    /*Imagenes responsive color autitos*/
+    .img {
+        width: 20%;
+        height: 20%;
+        margin: 0 16vh 0 0;
+    }
+}
+
+@media (max-width: 370px) {
+    .mru {
+        width: 350px; /* Hace mas chico el canvas */
+        height: auto; /* Altura se ajusta automáticamente */
+    }
+    .img {
+        margin: 0 15vh 0 0;
+    }
+}
