@@ -212,6 +212,10 @@ footer h3 {
         height: 20%;
         margin: 0 16vh 0 0;
     }
+    .img:hover {
+        width: 20%;
+        height: 20%;
+    }
 }
 
 @media (max-width: 370px) {
