@@ -213,8 +213,10 @@ footer h3 {
         margin: 0 16vh 0 0;
     }
     .img:hover {
+        transform:none;
         width: 20%;
         height: 20%;
+        margin: 0 16vh 0 0;
     }
 }
 
